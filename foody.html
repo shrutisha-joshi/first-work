@@ -1,0 +1,68 @@
+<html>
+<head>
+<title>My Web Page | shrutisha</title>
+<link href='./my_new_webpage_style.css' rel='stylesheet'/>
+</head>
+<body><br>
+<div id='textbox'>
+<p class='aligncenter' align='center'><b>Welcome To The New World</b></p>
+</div>
+<div id='sign' align='center'>
+<u><h3>Login Here:</h3></u>
+<p>Register no:
+<input type='text' class='name' id='name' name='uname'/></p>
+<p>Password:
+<input type='password' class='pass' id='pass' name='pname'/></p>
+<p><input type='submit' value='login' class='sub1' id='login'/></p>
+<p><input type='submit' value='register' class='sub2' id='register'/></p>
+</div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){	
+	
+	 $("#login").click(function(){ 
+		var usname=$("#name").val();
+		var pass=$("#pass").val();
+		if (usname==="" || pass===""){
+		alert("please fill all the details!");
+		}
+		else
+		{
+		$.ajax({ url:"dblink2.php",
+		         type:"POST",
+		         data:{"username":usname,"pasword":pass},
+		         success:function(data){
+					 if (data==1){
+						 window.location="spare.html";
+					 }
+					 else
+					 {
+					 alert("invalid username/password combination");
+					 }
+					 }
+			});
+			}
+	});
+	$("#register").click(function(){
+		var usname=$("#name").val();
+		var pass=$("#pass").val();
+	    if (usname==="" || pass===""){
+		alert("please fill all the details!");
+		}
+		else if(usname.length>9){
+		alert("length of register no. should be less than 9!");
+		}
+		else
+		{
+		$.ajax({ url:"dblink.php",
+		         type:"POST",
+		         data:{"username":usname, "pasword":pass},
+		         success:function(data){
+					 alert("sucess!");
+					 }});
+				 }
+			});
+	});
+</script>
+</html>
