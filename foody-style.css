@@ -1,0 +1,67 @@
+#login {
+    background-color: green;
+    color: white;
+    height: 60;
+    width: 150;
+}
+#temp{
+margin:20;
+text-align: center;
+    margin: 50 auto;
+    margin-left: 5;
+    margin-right: 5;
+    background-color: green;
+    padding-top: 10;
+    padding-bottom: 30;
+    border: thin solid blueviolet;
+    box-shadow: 0 4px 8px;
+    border-radius: 20;
+    font-family: cursive;
+    font-size: large;
+}
+#sign{
+       text-align: center;
+    margin: 50 auto;
+    margin-left: 40;
+    margin-right: 40;
+    background-color: whitesmoke;
+    padding-top: 10;
+    padding-bottom: 30;
+    border: thin solid blueviolet;
+    box-shadow: 0 4px 8px;
+    border-radius: 20;
+    font-family: cursive;
+    font-size: large;
+}
+#submit{
+font-family: cursive;
+    padding: 5px;
+font-size:large;
+border-radius:6px;
+border-size:30px;
+}
+.sub:hover{
+background-color:lightblue;
+} 
+.sub:active{
+background-color:white;
+border-color:indigo;
+border-size:30px;}
+#id1{
+float:left;
+margin-top:0;
+margin-left:0;
+border-radius:100%;
+width:90px;
+height:60px;
+}
+.alignleft{
+float:left;
+font-size: x-large;
+}
+.aligncenter{
+float:center;
+font-size: xx-large;}
+a{
+color:green;
+}
